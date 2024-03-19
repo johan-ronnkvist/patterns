@@ -1,0 +1,9 @@
+from typing import Protocol
+
+
+class Composite[T](Protocol):
+    def append(self, component: T) -> None: ...
+
+    def remove(self, component: T) -> None: ...
+
+    def items(self) -> list[T]: ...
